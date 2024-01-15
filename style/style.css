@@ -1,0 +1,74 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  outline: none;
+}
+html { height: 100%; } /* always display scrollbars 101%*/
+body { font-size: 30px; line-height: 1; font-family: Arial, Tahoma, Verdana, sans-serif;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; } 
+
+input { outline: none; width: 500px; height: 30px; padding-left: 10px; font-size: 20px;}
+
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+
+h1, h2 {
+  margin: 0 0 20px 0;
+}
+.wrapper {
+  width: 1000px;  
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+}
+
+.par{
+  display: flex;
+  justify-content: center;
+}
+
+.ch {
+}
+.ch2 {
+    margin-left: 30px;
+}
+
+
+.button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.btn_ok {
+    background-color: #fff; 
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.btn_clear {
+    background-color: #fff; 
+    color: black; 
+    border: 2px solid #C8102E;
+}
