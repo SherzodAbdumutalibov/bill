@@ -1,71 +1,45 @@
-let textH2 = document.querySelector('.text').value;
+let textH2 = document.querySelector('.text').innerText; // Use innerText instead of value for getting text content
 
-const btn_ok = document.querySelector('.btn_ok');
-const btn_clear = document.querySelector('.btn_clear');
+let i, people, ser, dishes, summary;
+let pep, service, dish, sum;
 
-function numOfPeople() {
-	document.querySelector('.text').innerHTML = 'Введите число людей';
-	let input = document.querySelector('.input').value;
-	let inputMDF = parseInt(input);
-	if (inputMDF) {
-		return inputMDF
-	} else {
-		return 'Можно вводить только цифры'
-	}
-}
+let btn_ok1 = document.querySelector('.btn_ok1');
+let btn_ok2 = document.querySelector('.btn_ok2');
+let btn_ok3 = document.querySelector('.btn_ok3');
+let btn_ok4 = document.querySelector('.btn_ok4');
+let btn_clear = document.querySelector('.btn_clear');
 
-function restaurantService() {
-	document.querySelector('.text').innerHTML = 'Введите процент обслуги';
-	document.querySelector('.input').value = '';
-	let input = document.querySelector('.input').value;
-	let inputMDF = parseFloat(input);
-	if (inputMDF) {
-		return inputMDF
-	} else {
-		return 'Можно вводить только цифры'
-	}
-}
+btn_ok1.addEventListener('click', function abc() {
 
-function start() {
-	let people, ser, dishes, summary;
+    document.querySelector('.text').innerText = 'Введите число людей'; 
 
-	people = numOfPeople();
-	if (typeof people === 'number') {
-	  console.log('number of people', people);
-	} else {
-	  return;
-	}
-	console.log('Программа проходит дальше');
-	
-	btn_ok.addEventListener('click', restaurantService);
-	ser = restaurantService();
-	if (typeof ser === 'number') {
-		console.log('restaurant service', ser);
-	} else {
-		return;
-	}
-	console.log('Программа заканчивается');
+    let input = document.querySelector('.input').value;
 
-}
+    let inputMDF = parseInt(input);
 
-// function sharedFood() {
-// 	let input = document.querySelector('.input').value;
-// 	if (input !== Number) {
-// 		console.log('Функция numOfPeople не сработала', input)
-// 		return false
-// 	} else {
-// 		console.log('Функция numOfPeople работает', n)
-// 		return input
-// 	}
-// }
+    if (!isNaN(inputMDF)) { 
+        people = inputMDF;
+        btn_ok1.classList.remove('btn_ok1');
+    } else {
+        document.querySelector('.text').innerText = 'Можно вводить только цифры'; // Use innerText for setting text content
+    }
+	console.log('внутри функции btn_ok1', people)
+});
+
+btn_ok2.addEventListener('click', function btn_ok2() {
+	document.querySelector('.text').innerText = 'Введите процент'; 
+	console.log('внутри функции btn_ok2', people);
+	console.log('внутри функции btn_ok2', btn_ok4.className);
+})
+
+
+
 
 
 function clearPage() {
 	document.querySelector('.input').value = '';
 	console.clear();
-	numOfPeople();
+	textH2 = 'Введи число людей'
 }
-
-
-btn_ok.addEventListener('click', start);
+console.log('Программа закончилась');
 btn_clear.addEventListener('click', clearPage);
